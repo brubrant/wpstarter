@@ -1,0 +1,118 @@
+/*!
+ * Theme Name: 
+ * Theme URI: 
+ * Description: 
+ * Version: 0.1
+ * Author: 
+ * Author URI: http://brubrant.com
+ * Tags: theme-options, threaded-comments, microformats, translation-ready, rtl-language-support, one-column, two-columns, three-columns, fixed-width
+ * License: GNU General Public License v2.0
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Copyright (c) 2012 - seu nome   All rights reserved.
+ */
+
+/* ********************
+* IMPORTANDO ESTILOS
+******************** */
+
+/* import normalize *
+ * um tipo de reset que mantem os bons defaults */
+// @import "normalize"; CSS do TWBS possui isso
+
+
+/* importa Twitter Botstrap CSS */
+@import "bootstrap";
+
+/* importa mixins */
+@import "mixins";
+
+/* Importa estilos de tipografia */
+@import "tipografia";
+
+/* importa folha de listas */
+@import "lists";
+
+/* importa folha de estilos principal */
+@import "principal";
+
+
+
+
+
+/******************************************************************
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+******************************************************************/
+@media print { 
+  * { 
+    background: transparent !important; 
+    color: black !important; 
+    text-shadow: none !important; 
+    filter:none !important; 
+    -ms-filter: none !important; 
+  } 
+  
+  a, a:visited { 
+    color: #444 !important; 
+    text-decoration: underline; 
+    
+    /* show links on printed pages */
+    &:after { 
+      content: " (" attr(href) ")"; 
+    }
+    
+    /* show title too */
+    abbr[title]:after { 
+      content: " (" attr(title) ")"; 
+    }
+  } 
+  
+  .ir a:after,
+  a[href^="javascript:"]:after, 
+  a[href^="#"]:after { 
+    content: ""; 
+  } 
+  
+  pre, blockquote { 
+    border: 1px solid #999; 
+    page-break-inside: avoid; 
+  } 
+  
+  thead { 
+    display: table-header-group; 
+  } 
+  
+  tr, img { 
+    page-break-inside: avoid; 
+  } 
+  
+  img { 
+    max-width: 100% !important; 
+  }
+    
+    @page { 
+      margin: 0.5cm;
+    } 
+    
+    p, h2, h3 { 
+      orphans: 3; 
+      widows: 3; 
+    } 
+    
+    h2, 
+    h3 { 
+      page-break-after: avoid; 
+    }
+    
+    /* hide content people who print don't need to see */
+    .sidebar,
+    .page-navigation, 
+    .wp-prev-next,
+    .respond-form,
+    nav {
+      display: none;
+    }
+}
