@@ -25,11 +25,10 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-		<!-- wrapper -->
-		<div class="wrapper">
-
-			<!-- header -->
-			<header class="header clear" role="banner">
+		<!-- header -->
+		<div class="container" id="container-header">
+			<div class="row header-row">
+				<header class="header clear col-xs-12" role="banner">			
 
 					<!-- logo -->
 					<div class="logo">
@@ -43,8 +42,8 @@
 					<!-- nav -->
 					<nav class="nav" role="navigation">
 						<?php html5blank_nav(); ?>
-					</nav>
-					<!-- /nav -->
+					</nav><!-- /nav -->
 
-			</header>
-			<!-- /header -->
+				</header><!-- /header -->
+			</div><!-- /row -->
+		</div><!-- header-container -->

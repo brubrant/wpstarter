@@ -1,77 +1,84 @@
 <?php get_header(); ?>
 
-	<main role="main">
-		<!-- section -->
-		<section>
 
-		<?php if (have_posts()): the_post(); ?>
+<div class="container">
 
-			<h1><?php _e( 'Author Archives for ', 'html5blank' ); echo get_the_author(); ?></h1>
+	<div class="row">
 
-		<?php if ( get_the_author_meta('description')) : ?>
+		<main role="main">
+			<!-- section -->
+			<section>
 
-		<?php echo get_avatar(get_the_author_meta('user_email')); ?>
+			<?php if (have_posts()): the_post(); ?>
 
-			<h2><?php _e( 'About ', 'html5blank' ); echo get_the_author() ; ?></h2>
+				<h1><?php _e( 'Author Archives for ', 'html5blank' ); echo get_the_author(); ?></h1>
 
-			<?php echo wpautop( get_the_author_meta('description') ); ?>
+			<?php if ( get_the_author_meta('description')) : ?>
 
-		<?php endif; ?>
+			<?php echo get_avatar(get_the_author_meta('user_email')); ?>
 
-		<?php rewind_posts(); while (have_posts()) : the_post(); ?>
+				<h2><?php _e( 'About ', 'html5blank' ); echo get_the_author() ; ?></h2>
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<?php echo wpautop( get_the_author_meta('description') ); ?>
 
-				<!-- post thumbnail -->
-				<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
-					</a>
-				<?php endif; ?>
-				<!-- /post thumbnail -->
+			<?php endif; ?>
 
-				<!-- post title -->
-				<h2>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-				</h2>
-				<!-- /Post title -->
+			<?php rewind_posts(); while (have_posts()) : the_post(); ?>
 
-				<!-- post details -->
-				<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-				<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-				<span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-				<!-- /post details -->
+				<!-- article -->
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+					<!-- post thumbnail -->
+					<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+							<?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
+						</a>
+					<?php endif; ?>
+					<!-- /post thumbnail -->
 
-				<br class="clear">
+					<!-- post title -->
+					<h2>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+					</h2>
+					<!-- /Post title -->
 
-				<?php edit_post_link(); ?>
+					<!-- post details -->
+					<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
+					<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
+					<span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
+					<!-- /post details -->
 
-			</article>
-			<!-- /article -->
+					<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
 
-		<?php endwhile; ?>
+					<br class="clear">
 
-		<?php else: ?>
+					<?php edit_post_link(); ?>
 
-			<!-- article -->
-			<article>
+				</article>
+				<!-- /article -->
 
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+			<?php endwhile; ?>
 
-			</article>
-			<!-- /article -->
+			<?php else: ?>
 
-		<?php endif; ?>
+				<!-- article -->
+				<article>
 
-			<?php get_template_part('pagination'); ?>
+					<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
 
-		</section>
-		<!-- /section -->
-	</main>
+				</article>
+				<!-- /article -->
 
-<?php get_sidebar(); ?>
+			<?php endif; ?>
+
+				<?php get_template_part('pagination'); ?>
+
+			</section>
+			<!-- /section -->
+		</main>
+
+		<?php get_sidebar(); ?>
+	</div>
+</div>
 
 <?php get_footer(); ?>
