@@ -4,7 +4,7 @@
 
 	<div class="row">
 
-		<main role="main">
+		<main role="main" class="col-xs-12 col-md-8">
 		<!-- section -->
 		<section>
 
