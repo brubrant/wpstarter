@@ -4,19 +4,21 @@
 
 	<div class="row">
 
-		<main role="main" class="col-xs-12 col-md-8">
-			<!-- section -->
-			<section>
+		<div class="primary-content col-xs-12 col-md-8">
+			<main role="main" class="">
+				<!-- section -->
+				<section>
 
-				<h1><?php _e( 'Archives', 'html5blank' ); ?></h1>
+					<h1><?php _e( 'Archives', 'html5blank' ); ?></h1>
 
-				<?php get_template_part('loop'); ?>
+					<?php get_template_part('loop'); ?>
 
-				<?php get_template_part('pagination'); ?>
+					<?php get_template_part('pagination'); ?>
 
-			</section>
-			<!-- /section -->
-		</main>
+				</section>
+				<!-- /section -->
+			</main>			
+		</div>
 
 		<?php get_sidebar(); ?>
 	</div>

@@ -4,19 +4,22 @@
 <div class="container">
 
 	<div class="row">
-		<main role="main" class="col-xs-12 col-md-8">
-			<!-- section -->
-			<section>
+		<div class="primary-content col-xs-12 col-md-8">
+			<main role="main" class="">
 
-				<h1><?php _e( 'Categories for ', 'html5blank' ); single_cat_title(); ?></h1>
+				<!-- section -->
+				<section>
 
-				<?php get_template_part('loop'); ?>
+					<h1><?php _e( 'Categories for ', 'html5blank' ); single_cat_title(); ?></h1>
 
-				<?php get_template_part('pagination'); ?>
+					<?php get_template_part('loop'); ?>
 
-			</section>
-			<!-- /section -->
-		</main>
+					<?php get_template_part('pagination'); ?>
+
+				</section>
+				<!-- /section -->
+			</main>
+		</div>
 
 		<?php get_sidebar(); ?>
 	</div>
