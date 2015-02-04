@@ -28,21 +28,26 @@
 		<!-- header -->
 		<div class="container" id="container-header">
 			<div class="row header-row">
-				<header class="header clear col-xs-12" role="banner">			
-
+				<header class="navbar header clear col-xs-12" role="banner">			
 					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
+					<div class="logo navbar-header">
+						<a class="" href="<?php echo home_url(); ?>">
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/logo_bionovis.png" alt="Logo" class="logo-img">
 						</a>
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
 					</div>
 					<!-- /logo -->
 
 					<!-- nav -->
-					<nav class="nav" role="navigation">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<?php html5blank_nav(); ?>
-					</nav><!-- /nav -->
+					</div><!-- /nav -->
 
 				</header><!-- /header -->
 			</div><!-- /row -->
