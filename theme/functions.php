@@ -63,6 +63,8 @@ if (function_exists('add_theme_support'))
 \*------------------------------------*/
 
 // HTML5 Blank navigation
+require_once('wp_bootstrap_navwalker.php');
+
 function html5blank_nav()
 {
     wp_nav_menu(
