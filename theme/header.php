@@ -32,8 +32,7 @@
 					<!-- logo -->
 					<div class="logo navbar-header">
 						<a class="" href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo_bionovis.png" alt="Logo" class="logo-img">
+							<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/logo_bionovis.png" alt="Logo" class="logo-img"> -->
 						</a>
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 							<span class="sr-only">Toggle navigation</span>
