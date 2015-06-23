@@ -395,7 +395,7 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 \*------------------------------------*/
 
 // Create custom post types and taxonomies
-require_once( 'custom-post-type.php' );
+require_once( 'custom-post-types.php' );
 
 
 /*------------------------------------*\
