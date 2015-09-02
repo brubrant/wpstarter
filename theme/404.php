@@ -1,31 +1,31 @@
 <?php get_header(); ?>
 
-<div class="container main-container">
+<div class="container">
 
 	<div class="row">
 
-		<?php get_sidebar(); ?>
-
-		<main role="main" class="col-xs-12 col-md-9">
+		<div class="primary-content col-xs-12 col-md-8">
+			<main role="main" class="">
 			<!-- section -->
-			<section>
+				<section>
 
-				<!-- article -->
-				<article id="post-404">
+					<article id="post-404">
 
-					<h1><?php _e( 'Page not found', 'html5blank' ); ?></h1>
-					<h2>
-						<a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'html5blank' ); ?></a>
-					</h2>
+						<h1><?php _e( 'Page not found', 'html5blank' ); ?></h1>
+						<h2>
+							<a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'html5blank' ); ?></a>
+						</h2>
 
-				</article>
-				<!-- /article -->
+					</article>
+					<!-- /article -->
 
-			</section>
-			<!-- /section -->
-		</main>
+				</section>
+				<!-- /section -->
+			</main>
+		</div>
+
+		<?php get_sidebar(); ?>
 	</div>
-</div>	
-
+</div>
 
 <?php get_footer(); ?>
